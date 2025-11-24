@@ -1,0 +1,34 @@
+{
+  "name": "student",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "dependencies": {
+    "@cap-js-community/odata-v2-adapter": "github:cap-js-community/odata-v2-adapter",
+    "@cap-js/postgres": "^2.0.6",
+    "@sap/cds": "^9",
+    "@sap/xssec": "^4",
+    "express": "^4"
+  },
+  "devDependencies": {
+    "@cap-js/sqlite": "^2"
+  },
+  "scripts": {
+    "start": "cds-serve",
+    "watch-student": "cds watch --open student/webapp/index.html?sap-ui-xx-viewCache=false"
+  },
+  "private": true,
+  "cds": {
+    "requires": {
+      "db": {
+        "kind": "postgres",
+        "credentials": {
+          "host": "localhost",
+          "port": "5432",
+          "database": "postgres",
+          "user": "postgres",
+          "password": "sunny"
+        }
+      }
+    }
+  }
+}
