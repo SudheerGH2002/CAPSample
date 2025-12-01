@@ -1,0 +1,8 @@
+---
+applications:
+  - name: student
+    path: .
+    memory: 256M
+    buildpacks:
+      - nodejs_buildpack
+    random-route: true
